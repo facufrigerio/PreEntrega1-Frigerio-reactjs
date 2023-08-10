@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.kickzlogo {
+  width: 125px;
+  height: 125px;
+
+}
+
+.item-list-container {
+  color: blue;
+  border-radius: 4%;
+}
+
+
+nav {
+  background-color: yellow;
+}
+
+.navbar .nav-link:hover {
+  color: blue
+}
+
+.cart-widget {
+  position: relative;
+  display: inline-block;
+  color: blue;
+}
