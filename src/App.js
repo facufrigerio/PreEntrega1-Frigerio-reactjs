@@ -1,16 +1,12 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Router from './router/Router';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <ItemListContainer />
-    </div>
-  );
+  return <Router />  
 }
 
 export default App;
