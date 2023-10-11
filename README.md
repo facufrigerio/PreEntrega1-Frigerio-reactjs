@@ -1,1 +1,3 @@
-Proyecto final, en curso.
+Proyecto final, Kickz Oliva.
+Al avanzar en el proyecto, logré implementar con éxito la autenticación de usuarios utilizando Firebase Authentication.  Además, utilicé Firebase Realtime Database para gestionar el catálogo de productos en tiempo real. Cualquier cambio en los productos se reflejaba instantáneamente en la página, lo que facilitó la actualización y la disponibilidad de los artículos para los compradores.
+Sin embargo, cerca del final del desarrollo, surgió un problema inesperado que afectó la funcionalidad de un botón crítico en la página. Este botón estaba destinado a permitir a los usuarios agregar productos al carrito de compras, pero de repente dejó de funcionar correctamente. A pesar de mis mejores esfuerzos, no pude resolver este problema antes de la fecha de entrega del proyecto.
