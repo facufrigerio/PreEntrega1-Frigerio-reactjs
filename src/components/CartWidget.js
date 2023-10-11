@@ -1,14 +1,17 @@
 import React from 'react';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 function CartWidget() {
-    const itemCount = 1;
+    const { totalQuantity } = useContext(CartContext);
 
     return (
         <div className="cart-widget">
-            <i className="bi bi-cart4 "></i>
-            {itemCount > 0 && (
-                <span className="badge bg-danger notification-badge">{itemCount}</span>
-            )}
+            <Link to='/cart'>
+                <i className="bi bi-cart4 "></i>
+                <span className="badge bg-danger notification-badge"> {totalQuantity} </span>
+            </Link>
         </div>
     );
 }

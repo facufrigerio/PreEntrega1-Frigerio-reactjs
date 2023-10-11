@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { db } from '../firebase/client';
+import { collection, query, where, getDocs } from 'firebase/firestore'
 
 function ItemListContainer() {
 
@@ -10,14 +12,22 @@ function ItemListContainer() {
     useEffect(() => {
         async function fetchProductos() {
             try {
-                const response = await fetch(`${process.env.PUBLIC_URL}/data/productos.json`);
-                const data = await response.json();
-                const filteredProductos = categoryId
-                    ? data.filter(productos => productos.category === categoryId)
-                    : data;
-                setProductos(filteredProductos);
+                const productosCollection = collection(db, 'productos');
+                const q = categoryId
+                    ? query(productosCollection, where('category', '==', categoryId))
+                    : productosCollection;
+
+                const querySnapshot = await getDocs(q);
+
+                const productos = [];
+                querySnapshot.forEach((doc) => {
+                    const producto = doc.data();
+                    productos.push(producto);
+                });
+
+                setProductos(productos);
             } catch (error) {
-                console.error('Error fetching JSON:', error);
+                console.error('Error al obtener productos desde Firestore:', error);
             }
         }
 
@@ -47,7 +57,7 @@ function ItemListContainer() {
                                             <p>Marca:</p>
                                         </div>
                                         <div>
-                                            <p className="format">{producto.autor}</p>
+                                            <p className="format">{producto.category}</p>
                                         </div>
                                     </li>
                                 </ul>

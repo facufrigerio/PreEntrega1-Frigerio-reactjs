@@ -16,28 +16,13 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto ">
                         <li className="nav-item">
-                            <Link className="nav-link text-center " to="/category/camperas">
-                                Camperas
+                            <Link className="nav-link text-center " to="/category/ADIDAS">
+                                Casa Adidas
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-center" to="/category/zapatillas">
-                                Zapatillas
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-center" to="/category/buzos">
-                                Buzos
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-center" to="/category/pantalones">
-                                Pantalones
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-center" to="/category/contactanos">
-                                Contactanos
+                            <Link className="nav-link text-center" to="/category/NIKE">
+                                Casa Nike
                             </Link>
                         </li>
                     </ul>
